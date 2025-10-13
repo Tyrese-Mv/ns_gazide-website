@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-logo">
-            <p><strong>NS GAZIDE ATTORNEYS</strong></p>
+            <p><strong>GAZIDE ATTORNEYS</strong></p>
             <p className="footer-tagline">Experience, Integrity and Excellence</p>
           </div>
           <div className="footer-links">
@@ -18,7 +18,7 @@ const Footer = () => {
               <Link to="/contact">Contact</Link>
             </div>
             <p className="copyright">
-              &copy; 2025 NS Gazide Attorneys. All rights reserved.
+              &copy; 2025 Gazide Attorneys. All rights reserved.
             </p>
             <p className="legal-links">
               <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
