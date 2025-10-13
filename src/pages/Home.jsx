@@ -32,7 +32,7 @@ const Home = () => {
 
   const testimonials = [
     {
-      text: "NS Gazide Attorneys handled my RAF claim with exceptional professionalism. They kept me informed every step of the way and secured a favorable settlement. Highly recommend!",
+      text: "Gazide Attorneys handled my RAF claim with exceptional professionalism. They kept me informed every step of the way and secured a favorable settlement. Highly recommend!",
       author: "Thabo M.",
       case: "Road Accident Fund Claim"
     },
@@ -42,7 +42,7 @@ const Home = () => {
       case: "Family Law Matter"
     },
     {
-      text: "Professional, knowledgeable, and responsive. NS Gazide Attorneys handled our corporate contracts efficiently and gave us peace of mind. Excellent service!",
+      text: "Professional, knowledgeable, and responsive. Gazide Attorneys handled our corporate contracts efficiently and gave us peace of mind. Excellent service!",
       author: "David K.",
       case: "Corporate Law"
     }
