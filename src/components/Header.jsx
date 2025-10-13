@@ -32,8 +32,8 @@ const Header = () => {
             </div>
             <div className="logo-text">
               <div>
-                <span className="logo-ns">NS</span>{' '}
-                <span className="logo-gazide">GAZIDE ATTORNEYS</span>
+                <span className="logo-ns">GAZIDE</span>{' '}
+                <span className="logo-gazide">ATTORNEYS</span>
               </div>
               <p className="tagline">Experience, Integrity and Excellence</p>
             </div>

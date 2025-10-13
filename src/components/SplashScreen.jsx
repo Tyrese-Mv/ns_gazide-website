@@ -53,17 +53,17 @@ const SplashScreen = ({ onComplete }) => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            <span className="splash-ns">NS</span>{' '}
-            <span className="splash-gazide">GAZIDE</span>
+            <span className="splash-ns">GAZIDE</span>{' '}
+            <span className="splash-gazide">ATTORNEYS</span>
           </motion.h1>
-          <motion.p
+          {/* <motion.p
             className="splash-subtitle"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.5 }}
           >
             ATTORNEYS
-          </motion.p>
+          </motion.p> */}
         </motion.div>
 
         <motion.div
