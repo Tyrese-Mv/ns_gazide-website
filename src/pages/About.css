@@ -1,0 +1,243 @@
+.about-page {
+  padding-top: 80px;
+}
+
+.about-content-section {
+  padding: 100px 20px;
+  background-color: var(--accent-color);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-video {
+  width: 100%;
+}
+
+.video-placeholder {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border-radius: 16px;
+  padding: 100px 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border: 3px solid transparent;
+}
+
+.video-placeholder:hover {
+  border-color: var(--primary-color);
+  transform: scale(1.03);
+  box-shadow: 0 12px 40px rgba(139, 21, 56, 0.3);
+}
+
+.play-button {
+  font-size: 70px;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  opacity: 0.95;
+  transition: transform 0.3s ease;
+}
+
+.video-placeholder:hover .play-button {
+  transform: scale(1.15);
+}
+
+.video-placeholder p {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.about-text h2 {
+  font-size: 44px;
+  color: var(--secondary-color);
+  margin-bottom: 12px;
+}
+
+.about-text .title {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 28px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--text-color);
+  margin-bottom: 22px;
+}
+
+.credentials {
+  margin-top: 40px;
+  padding: 35px;
+  background: linear-gradient(135deg, var(--light-gray) 0%, #FFFFFF 100%);
+  border-radius: 12px;
+  border-left: 5px solid var(--primary-color);
+}
+
+.credentials h3 {
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.credentials-list {
+  list-style: none;
+}
+
+.credentials-list li {
+  padding: 10px 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--dark-gray);
+}
+
+/* Values Section */
+.values-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--accent-color);
+}
+
+.values-section h2 {
+  text-align: center;
+  font-size: 44px;
+  margin-bottom: 60px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 45px;
+}
+
+.value-card {
+  text-align: center;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.value-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-8px);
+}
+
+.value-number {
+  font-size: 72px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.1);
+  line-height: 1;
+  margin-bottom: 25px;
+  font-family: Georgia, serif;
+}
+
+.value-card h3 {
+  font-size: 28px;
+  margin-bottom: 18px;
+  color: var(--accent-color);
+}
+
+.value-card p {
+  font-size: 16px;
+  color: var(--medium-gray);
+  line-height: 1.8;
+}
+
+/* Trust Badges */
+.trust-badges {
+  padding: 80px 20px;
+  background-color: var(--light-gray);
+}
+
+.trust-badges h3 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: var(--secondary-color);
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.badge {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: var(--accent-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(139, 21, 56, 0.15);
+}
+
+.badge-line {
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  margin: 0 auto 20px;
+}
+
+.badge p {
+  font-size: 15px;
+  color: var(--secondary-color);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .video-placeholder {
+    padding: 80px 40px;
+  }
+
+  .about-text h2 {
+    font-size: 36px;
+  }
+
+  .values-section h2,
+  .trust-badges h3 {
+    font-size: 32px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-placeholder {
+    padding: 60px 30px;
+  }
+
+  .about-text h2 {
+    font-size: 30px;
+  }
+
+  .credentials {
+    padding: 25px;
+  }
+}

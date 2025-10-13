@@ -1,0 +1,132 @@
+.services-page {
+  padding-top: 80px;
+}
+
+.page-hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--accent-color);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.page-hero p {
+  font-size: 20px;
+  color: var(--medium-gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-detail {
+  padding: 100px 20px;
+  background-color: var(--light-gray);
+}
+
+.services-grid-full {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 35px;
+}
+
+.service-detail-card {
+  background-color: var(--accent-color);
+  padding: 45px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  border-top: 4px solid var(--primary-color);
+}
+
+.service-detail-card:hover {
+  box-shadow: 0 12px 35px rgba(139, 21, 56, 0.2);
+}
+
+.service-number {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary-color);
+  opacity: 0.1;
+}
+
+.service-detail-card h3 {
+  color: var(--primary-color);
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.service-detail-card p {
+  color: var(--dark-gray);
+  line-height: 1.8;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.learn-more {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.learn-more:hover {
+  color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.consultation-cta {
+  padding: 100px 20px;
+  background: linear-gradient(to right, var(--secondary-color) 0%, var(--primary-color) 100%);
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.consultation-content h2 {
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.consultation-content p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: var(--medium-gray);
+}
+
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 38px;
+  }
+
+  .page-hero p {
+    font-size: 18px;
+  }
+
+  .services-grid-full {
+    grid-template-columns: 1fr;
+  }
+
+  .consultation-content h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero h1 {
+    font-size: 32px;
+  }
+
+  .service-detail-card {
+    padding: 30px;
+  }
+}
