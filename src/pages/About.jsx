@@ -49,13 +49,13 @@ const About = () => {
               <p className="title">Managing Director</p>
               <p>
                 With extensive experience in South African law, Nongcebo Gazide has established
-                NS Gazide Attorneys as a trusted name in legal representation. Her commitment to
+                Gazide Attorneys as a trusted name in legal representation. Her commitment to
                 client success, combined with deep legal expertise across multiple practice areas,
                 ensures that every client receives personalized attention and strategic counsel.
               </p>
               <p>
                 Whether you're facing a complex litigation matter, need assistance with estate
-                planning, or require corporate legal services, NS Gazide Attorneys provides the
+                planning, or require corporate legal services, Gazide Attorneys provides the
                 experience and dedication you deserve.
               </p>
 
