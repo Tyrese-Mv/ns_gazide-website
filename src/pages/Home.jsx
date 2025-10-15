@@ -30,23 +30,6 @@ const Home = () => {
     'Immigration Law'
   ];
 
-  const testimonials = [
-    {
-      text: "Gazide Attorneys handled my RAF claim with exceptional professionalism. They kept me informed every step of the way and secured a favorable settlement. Highly recommend!",
-      author: "Thabo M.",
-      case: "Road Accident Fund Claim"
-    },
-    {
-      text: "Nongcebo provided outstanding guidance during my divorce proceedings. Her compassionate approach and legal expertise made a difficult time much easier to navigate.",
-      author: "Sarah P.",
-      case: "Family Law Matter"
-    },
-    {
-      text: "Professional, knowledgeable, and responsive. Gazide Attorneys handled our corporate contracts efficiently and gave us peace of mind. Excellent service!",
-      author: "David K.",
-      case: "Corporate Law"
-    }
-  ];
 
   return (
     <div className="home">
@@ -64,7 +47,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span>Trusted Legal Counsel Since 2010</span>
+            <span>Professional Legal Attorneys</span>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -81,8 +64,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            Delivering exceptional legal representation with unwavering dedication
-            to justice, integrity, and your success
+            To deliver exceptional legal services that prioritize clients needs, foster long-term relationships and drive positive outcome
           </motion.p>
           <motion.div
             className="hero-cta-group"
@@ -200,52 +182,6 @@ const Home = () => {
               View All Services →
             </Link>
           </motion.div>
-        </div>
-      </motion.section>
-
-      {/* Testimonials */}
-      <motion.section
-        className="testimonials"
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        variants={staggerChildren}
-      >
-        <div className="container">
-          <motion.h2 variants={fadeInUp}>Client Testimonials</motion.h2>
-          <div className="testimonials-grid">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                className="testimonial-card"
-                variants={fadeInUp}
-                whileHover={{
-                  y: -8,
-                  boxShadow: "0 12px 35px rgba(0, 0, 0, 0.15)",
-                  transition: { duration: 0.3 }
-                }}
-              >
-                <motion.div
-                  className="quote-mark"
-                  initial={{ rotate: 0 }}
-                  whileInView={{ rotate: 360 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
-                />
-                <p className="testimonial-text">{testimonial.text}</p>
-                <motion.div
-                  className="testimonial-author"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 + index * 0.1 }}
-                >
-                  <p className="author-name">{testimonial.author}</p>
-                  <p className="author-case">{testimonial.case}</p>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </motion.section>
 
