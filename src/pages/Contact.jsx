@@ -209,9 +209,12 @@ const Contact = () => {
                   <div>
                     <h4>Business Hours</h4>
                     <p>
-                      Monday - Friday: 9:00 AM - 6:00 PM<br />
+                      Monday - Friday: 8:00 - 17:00<br />
                       Saturday: By Appointment<br />
                       Sunday: Closed
+                    </p>
+                    <p style={{ marginTop: '0.5rem', fontSize: '0.9em', fontStyle: 'italic' }}>
+                      Telephone lines are open 24 hours
                     </p>
                   </div>
                 </motion.div>
