@@ -45,27 +45,21 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2>Nongcebo Gazide</h2>
-              <p className="title">Managing Director</p>
+              <h2>About Us</h2>
               <p>
-                With extensive experience in South African law, Nongcebo Gazide has established
-                Gazide Attorneys as a trusted name in legal representation. Her commitment to
-                client success, combined with deep legal expertise across multiple practice areas,
-                ensures that every client receives personalized attention and strategic counsel.
+                Gazide Attorneys is a 100% black-owned law firm based in Durban, KwaZulu-Natal, committed to delivering high-quality legal services with integrity and professionalism. Strategically placed to serve a distinctive market, we offer a unique combination of legal expertise, cultural understanding and forward-thinking solutions in every matter we undertake.
               </p>
-              <p>
-                Whether you're facing a complex litigation matter, need assistance with estate
-                planning, or require corporate legal services, Gazide Attorneys provides the
-                experience and dedication you deserve.
-              </p>
+
+              <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Nongcebo Sinegugu Gazide</h3>
+              <p className="title">Managing Director and Founder</p>
 
               <div className="credentials">
                 <h3>Professional Credentials</h3>
                 <ul className="credentials-list">
+                  <li>✓ Bachelor of Laws (LLB) from University of South Africa (UNISA)</li>
                   <li>✓ Admitted Attorney of the High Court of South Africa</li>
                   <li>✓ Member, Law Society of South Africa</li>
                   <li>✓ Specialist in RAF and Personal Injury Claims</li>
-                  <li>✓ LLB, University of South Africa</li>
                 </ul>
               </div>
             </motion.div>
