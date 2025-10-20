@@ -82,7 +82,7 @@ export const CONTACT_INFO = {
 export const SOCIAL_LINKS = {
   facebook: 'https://facebook.com/gazideattorneys',
   linkedin: 'https://linkedin.com/company/gazide-attorneys',
-  instagram: 'https://instagram.com/gazideattorneys',
+  instagram: 'https://instagram.com/gazide_attorneys',
   twitter: 'https://twitter.com/gazideattorneys'
 };
 
@@ -111,9 +111,9 @@ export const COMPANY_INFO = {
  * Statistics for home page
  */
 export const STATS = {
-  casesResolved: '500+',
-  clientSatisfaction: '98%',
-  yearsExperience: '15+',
+  casesResolved: '20+',
+  clientSatisfaction: '99%',
+  yearsExperience: '1+',
   support: '24/7'
 };
 
