@@ -1,13 +1,18 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { Toaster } from 'react-hot-toast';
+import { HelmetProvider } from 'react-helmet-async';
+import ErrorBoundary from './components/ErrorBoundary';
 import SplashScreen from './components/SplashScreen';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 import './App.css';
 
 const pageVariants = {
@@ -105,6 +110,19 @@ function AnimatedRoutes() {
             </motion.div>
           }
         />
+        <Route
+          path="*"
+          element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
+              <NotFound />
+            </motion.div>
+          }
+        />
       </Routes>
     </AnimatePresence>
   );
@@ -132,24 +150,49 @@ function App() {
   };
 
   return (
-    <Router>
-      <AnimatePresence>
-        {showSplash && isFirstLoad && (
-          <SplashScreen key="splash" onComplete={handleSplashComplete} />
-        )}
-      </AnimatePresence>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <Router>
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              duration: 4000,
+              style: {
+                background: '#333',
+                color: '#fff',
+                padding: '16px',
+                borderRadius: '8px',
+              },
+              success: {
+                iconTheme: {
+                  primary: '#8B1538',
+                  secondary: '#fff',
+                },
+              },
+            }}
+          />
+          <AnimatePresence>
+            {showSplash && isFirstLoad && (
+              <SplashScreen key="splash" onComplete={handleSplashComplete} />
+            )}
+          </AnimatePresence>
 
-      {!showSplash && (
-        <>
-          <ScrollToTop />
-          <div className="app">
-            <Header />
-            <AnimatedRoutes />
-            <Footer />
-          </div>
-        </>
-      )}
-    </Router>
+          {!showSplash && (
+            <>
+              <ScrollToTop />
+              <div className="app">
+                <Header />
+                <main id="main-content" role="main">
+                  <AnimatedRoutes />
+                </main>
+                <Footer />
+                <WhatsAppButton />
+              </div>
+            </>
+          )}
+        </Router>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 }
 

@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { COMPANY_INFO } from '../utils/constants';
+import gazidePhoto from '../assets/images/Gazide_picture_2_no_bg.png';
 import './About.css';
 
 const About = () => {
@@ -10,6 +13,15 @@ const About = () => {
 
   return (
     <div className="about-page">
+      <Helmet>
+        <title>About Us | {COMPANY_INFO.name}</title>
+        <meta name="description" content="100% black-owned law firm in Durban, KZN. Led by Nongcebo Sinegugu Gazide, admitted attorney with 15+ years experience in RAF claims and legal services." />
+        <meta name="keywords" content="law firm durban, black-owned attorney, nongcebo gazide, durban lawyer, KZN legal services, admitted attorney" />
+        <meta property="og:title" content={`About Us | ${COMPANY_INFO.name}`} />
+        <meta property="og:description" content="100% black-owned law firm in Durban. Experience, Integrity, Excellence." />
+        <meta property="og:url" content={window.location.href} />
+      </Helmet>
+
       <motion.section
         className="page-hero"
         initial={{ opacity: 0 }}
@@ -26,15 +38,18 @@ const About = () => {
         <div className="container">
           <div className="about-grid">
             <motion.div
-              className="about-video"
+              className="about-image"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="video-placeholder">
-                <div className="play-button">▶</div>
-                <p>Meet Nongcebo Gazide</p>
+              <div className="image-container">
+                <img
+                  src={gazidePhoto}
+                  alt="Nongcebo Sinegugu Gazide - Managing Director and Founder"
+                  className="about-profile-image"
+                />
               </div>
             </motion.div>
 

@@ -10,10 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
+    "@hookform/resolvers": "^5.2.2",
     "framer-motion": "^12.23.22",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-router-dom": "^7.9.3"
+    "react-helmet-async": "^2.0.5",
+    "react-hook-form": "^7.65.0",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.9.3",
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

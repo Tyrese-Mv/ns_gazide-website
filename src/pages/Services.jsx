@@ -1,59 +1,25 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { COMPANY_INFO } from '../utils/constants';
+import { getAllServices } from '../data/services';
+import { fadeInUp } from '../utils/animations';
 import './Services.css';
 
 const Services = () => {
-  const services = [
-    {
-      title: 'Road Accident Funds Claims (RAF)',
-      description: 'Expert representation for accident-related claims with proven success rates. We handle all aspects of RAF claims from initial consultation to final settlement.'
-    },
-    {
-      title: 'Medical Negligence',
-      description: 'Comprehensive legal support for medical malpractice cases. Our team has extensive experience in holding healthcare providers accountable.'
-    },
-    {
-      title: 'Wills and Estate Administration',
-      description: 'Professional guidance for estate planning and administration. We ensure your assets are protected and distributed according to your wishes.'
-    },
-    {
-      title: 'Family Law',
-      description: 'Divorces, maintenance, custody, and family dispute resolution. Compassionate legal support during difficult family transitions.'
-    },
-    {
-      title: 'Civil Litigation',
-      description: 'Strategic representation for civil disputes and legal matters. We protect your interests in contract disputes, property matters, and more.'
-    },
-    {
-      title: 'Criminal Litigation',
-      description: 'Experienced defense for criminal cases of all complexities. We provide vigorous representation to protect your rights and freedom.'
-    },
-    {
-      title: 'Corporate and Commercial Law',
-      description: 'Business legal services, contracts, and commercial transactions. Helping businesses navigate legal complexities and minimize risk.'
-    },
-    {
-      title: 'Labour and Employment Law',
-      description: 'Employment disputes, CCMA representation, and workplace matters. Protecting both employers and employees in labor disputes.'
-    },
-    {
-      title: 'Eviction',
-      description: 'Legal assistance for landlord-tenant disputes and eviction proceedings. Swift and effective resolution of property disputes.'
-    },
-    {
-      title: 'Immigration Law',
-      description: 'Visa applications, permits, and immigration legal services. Helping individuals and families navigate South African immigration law.'
-    }
-  ];
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
+  const services = getAllServices();
 
   return (
     <div className="services-page">
+      <Helmet>
+        <title>Legal Services | {COMPANY_INFO.name}</title>
+        <meta name="description" content="Comprehensive legal services in Durban, KZN. Specializing in RAF claims, medical negligence, family law, civil litigation, and more. Expert legal representation." />
+        <meta name="keywords" content="legal services durban, RAF claims, medical negligence lawyer, family law attorney, civil litigation, criminal defense durban, corporate law KZN" />
+        <meta property="og:title" content={`Legal Services | ${COMPANY_INFO.name}`} />
+        <meta property="og:description" content="Comprehensive legal services in Durban, KZN. Expert representation across 10+ practice areas." />
+        <meta property="og:url" content={window.location.href} />
+      </Helmet>
+
       <motion.section
         className="page-hero"
         initial={{ opacity: 0 }}

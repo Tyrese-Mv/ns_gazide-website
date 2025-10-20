@@ -1,0 +1,234 @@
+.error-boundary-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, var(--secondary-color) 100%);
+  color: var(--accent-color);
+}
+
+.error-boundary-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-icon {
+  margin-bottom: 30px;
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.error-icon svg {
+  filter: drop-shadow(0 4px 20px rgba(139, 21, 56, 0.3));
+}
+
+.error-boundary-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.error-message {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 40px;
+}
+
+.error-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.error-actions .cta-button {
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.error-actions .cta-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #a01632 100%);
+  color: var(--accent-color);
+  box-shadow: 0 8px 24px rgba(139, 21, 56, 0.3);
+}
+
+.error-actions .cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(139, 21, 56, 0.4);
+}
+
+.error-actions .cta-secondary {
+  background: transparent;
+  color: var(--accent-color);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.error-actions .cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.error-contact {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+.error-contact > p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.contact-links span {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Error details (dev mode only) */
+.error-details {
+  margin-top: 40px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.error-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+.error-details summary:hover {
+  color: var(--accent-color);
+}
+
+.error-stack {
+  margin-top: 15px;
+}
+
+.error-stack h3 {
+  color: var(--accent-color);
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.error-stack h3:first-child {
+  margin-top: 0;
+}
+
+.error-stack pre {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 12px;
+  color: #ff6b6b;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .error-boundary-content h1 {
+    font-size: 36px;
+  }
+
+  .error-message {
+    font-size: 16px;
+  }
+
+  .error-icon svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .error-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .error-actions .cta-button {
+    width: 100%;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contact-links span {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-boundary-page {
+    padding: 100px 12px 60px;
+  }
+
+  .error-boundary-content h1 {
+    font-size: 28px;
+  }
+
+  .error-message {
+    font-size: 15px;
+  }
+
+  .error-icon svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .error-stack pre {
+    font-size: 10px;
+  }
+}

@@ -14,42 +14,70 @@
   align-items: center;
 }
 
-.about-video {
+.about-image {
   width: 100%;
 }
 
-.video-placeholder {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+.image-container {
+  position: relative;
+  width: 100%;
   border-radius: 16px;
-  padding: 100px 50px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  border: 3px solid transparent;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
 }
 
-.video-placeholder:hover {
-  border-color: var(--primary-color);
-  transform: scale(1.03);
-  box-shadow: 0 12px 40px rgba(139, 21, 56, 0.3);
-}
-
-.play-button {
-  font-size: 70px;
-  color: var(--accent-color);
-  margin-bottom: 20px;
-  opacity: 0.95;
+.about-profile-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 16px;
   transition: transform 0.3s ease;
 }
 
-.video-placeholder:hover .play-button {
-  transform: scale(1.15);
+.image-container:hover .about-profile-image {
+  transform: scale(1.02);
 }
 
-.video-placeholder p {
-  font-size: 22px;
+/* Placeholder styling when no image is uploaded */
+.image-placeholder {
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  border: 3px dashed var(--medium-gray);
+  border-radius: 16px;
+  padding: 80px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  transition: all 0.3s ease;
+}
+
+.image-placeholder:hover {
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+}
+
+.image-placeholder svg {
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.image-placeholder p {
+  font-size: 20px;
   font-weight: 700;
-  color: var(--accent-color);
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+}
+
+.image-placeholder .photo-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--primary-color);
+  font-style: italic;
+  margin-bottom: 0;
 }
 
 .about-text h2 {
@@ -210,8 +238,9 @@
     gap: 40px;
   }
 
-  .video-placeholder {
-    padding: 80px 40px;
+  .image-placeholder {
+    padding: 60px 30px;
+    min-height: 350px;
   }
 
   .about-text h2 {
@@ -229,8 +258,22 @@
 }
 
 @media (max-width: 480px) {
-  .video-placeholder {
-    padding: 60px 30px;
+  .image-placeholder {
+    padding: 50px 25px;
+    min-height: 300px;
+  }
+
+  .image-placeholder svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .image-placeholder p {
+    font-size: 18px;
+  }
+
+  .image-placeholder .photo-subtitle {
+    font-size: 14px;
   }
 
   .about-text h2 {

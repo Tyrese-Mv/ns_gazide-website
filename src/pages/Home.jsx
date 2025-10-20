@@ -1,38 +1,67 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { SEO_DEFAULTS, COMPANY_INFO, STATS } from '../utils/constants';
+import { getFeaturedServices } from '../data/services';
+import { fadeInUp, staggerChildren } from '../utils/animations';
 import './Home.css';
 
 const Home = () => {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
-
-  const staggerChildren = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const services = [
-    'Road Accident Funds Claims (RAF)',
-    'Medical Negligence',
-    'Wills and Estate Administration',
-    'Family Law',
-    'Civil Litigation',
-    'Criminal Litigation',
-    'Corporate and Commercial Law',
-    'Labour and Employment Law',
-    'Eviction',
-    'Immigration Law'
-  ];
+  const featuredServices = getFeaturedServices(6);
 
 
   return (
     <div className="home">
+      <Helmet>
+        <title>{SEO_DEFAULTS.defaultTitle}</title>
+        <meta name="description" content={SEO_DEFAULTS.defaultDescription} />
+        <meta name="keywords" content={SEO_DEFAULTS.keywords} />
+        <meta name="author" content={SEO_DEFAULTS.author} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:title" content={SEO_DEFAULTS.defaultTitle} />
+        <meta property="og:description" content={SEO_DEFAULTS.defaultDescription} />
+        <meta property="og:image" content={SEO_DEFAULTS.ogImage} />
+        <meta property="og:site_name" content={COMPANY_INFO.name} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={window.location.href} />
+        <meta name="twitter:title" content={SEO_DEFAULTS.defaultTitle} />
+        <meta name="twitter:description" content={SEO_DEFAULTS.defaultDescription} />
+        <meta name="twitter:image" content={SEO_DEFAULTS.ogImage} />
+
+        {/* JSON-LD Structured Data for Legal Service */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LegalService",
+            "name": COMPANY_INFO.name,
+            "description": COMPANY_INFO.description,
+            "url": window.location.origin,
+            "telephone": "+27761731018",
+            "email": "nongcebogazide@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "303 Anton Lembede Street, 5th Floor, Durban Club Place",
+              "addressLocality": "Durban",
+              "addressRegion": "KwaZulu-Natal",
+              "addressCountry": "ZA"
+            },
+            "founder": {
+              "@type": "Person",
+              "name": COMPANY_INFO.founder.name,
+              "jobTitle": COMPANY_INFO.founder.title,
+              "alumniOf": "University of South Africa (UNISA)"
+            },
+            "areaServed": "Durban",
+            "priceRange": "$$"
+          })}
+        </script>
+      </Helmet>
+
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-background">
@@ -64,7 +93,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            To deliver exceptional legal services that prioritize clients needs, foster long-term relationships and drive positive outcome
+            To deliver exceptional legal services that prioritize clients' needs, foster long-term relationships and drive positive outcomes
           </motion.p>
           <motion.div
             className="hero-cta-group"
@@ -112,10 +141,10 @@ const Home = () => {
         <div className="container">
           <div className="stats-grid">
             {[
-              { number: '500+', label: 'Cases Resolved' },
-              { number: '98%', label: 'Client Satisfaction' },
-              { number: '15+', label: 'Years Experience' },
-              { number: '24/7', label: 'Available Support' }
+              { number: STATS.casesResolved, label: 'Cases Resolved' },
+              { number: STATS.clientSatisfaction, label: 'Client Satisfaction' },
+              { number: STATS.yearsExperience, label: 'Years Experience' },
+              { number: STATS.support, label: 'Available Support' }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -153,9 +182,9 @@ const Home = () => {
         <div className="container">
           <motion.h2 variants={fadeInUp}>Our Legal Services</motion.h2>
           <div className="services-grid">
-            {services.slice(0, 6).map((service, index) => (
+            {featuredServices.map((service, index) => (
               <motion.div
-                key={index}
+                key={service.id}
                 className="service-card"
                 variants={fadeInUp}
                 whileHover={{
@@ -173,7 +202,7 @@ const Home = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + index * 0.05, type: "spring", stiffness: 200 }}
                 />
-                <h3>{service}</h3>
+                <h3>{service.title}</h3>
               </motion.div>
             ))}
           </div>

@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gazide Attorneys - Website Content Questionnaire</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2c2c2c;
+            background: #ffffff;
+            padding: 60px 80px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #8B1538;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #8B1538;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header h2 {
+            font-size: 20px;
+            color: #666;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .metadata {
+            background: #f5f5f5;
+            padding: 25px;
+            border-left: 5px solid #8B1538;
+            margin: 30px 0;
+            font-size: 15px;
+        }
+
+        .metadata strong {
+            color: #8B1538;
+        }
+
+        .intro {
+            background: #fff9f9;
+            padding: 30px;
+            border: 2px solid #8B1538;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .intro p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .instructions {
+            background: #f0f8ff;
+            padding: 25px;
+            border-left: 5px solid #4a90e2;
+            margin: 30px 0;
+        }
+
+        .instructions h3 {
+            color: #4a90e2;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .instructions ul {
+            margin-left: 25px;
+        }
+
+        .instructions li {
+            margin-bottom: 8px;
+        }
+
+        .section {
+            page-break-inside: avoid;
+            margin: 50px 0;
+            padding: 30px 0;
+            border-top: 3px solid #8B1538;
+        }
+
+        .section-header {
+            background: #8B1538;
+            color: white;
+            padding: 15px 25px;
+            margin: -30px 0 30px 0;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            color: #666;
+            font-style: italic;
+            margin-top: -25px;
+            margin-bottom: 30px;
+            padding-left: 25px;
+            font-size: 15px;
+        }
+
+        .question {
+            margin: 35px 0;
+            page-break-inside: avoid;
+        }
+
+        .question-number {
+            color: #8B1538;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c2c2c;
+            margin-bottom: 8px;
+        }
+
+        .question-hint {
+            color: #777;
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .answer-space {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            min-height: 120px;
+            background: #fafafa;
+            margin-top: 10px;
+        }
+
+        .answer-space.large {
+            min-height: 180px;
+        }
+
+        .answer-space.small {
+            min-height: 80px;
+        }
+
+        .subsection {
+            background: #f9f9f9;
+            padding: 25px;
+            border-left: 4px solid #8B1538;
+            margin: 30px 0;
+        }
+
+        .subsection-title {
+            font-size: 18px;
+            color: #8B1538;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .checkbox-group {
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .checkbox-item input {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+        }
+
+        .divider {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #8B1538, transparent);
+            margin: 40px 0;
+        }
+
+        .bonus-section {
+            background: linear-gradient(135deg, #fff9e6 0%, #ffe6f0 100%);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .quick-fire {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .quick-fire-label {
+            font-weight: 600;
+            color: #8B1538;
+        }
+
+        .quick-fire-input {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            border-radius: 4px;
+            background: white;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 3px solid #8B1538;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .highlight-box strong {
+            color: #8B1538;
+        }
+
+        @media print {
+            body {
+                padding: 40px;
+            }
+            .section {
+                page-break-before: always;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 20px;
+            }
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+            .quick-fire {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>GAZIDE ATTORNEYS</h1>
+        <h2>Website Content Questionnaire</h2>
+    </div>
+
+    <div class="metadata">
+        <p><strong>PREPARED FOR:</strong> Nongcebo Sinegugu Gazide</p>
+        <p><strong>DATE:</strong> January 2025</p>
+        <p><strong>PURPOSE:</strong> Gathering content to humanize and strengthen the Gazide Attorneys website</p>
+        <p><strong>RETURN BY:</strong> _____________________ (Suggested: 1-2 weeks)</p>
+    </div>
+
+    <div class="intro">
+        <p><strong>Dear Nongcebo,</strong></p>
+        <p>To create a website that truly connects with potential clients, I need to showcase the person behind the practice - <strong>YOU!</strong> This questionnaire will help me craft authentic content that tells your story and builds trust with visitors.</p>
+        <p>Your answers will transform the website from a simple service listing into a powerful tool that demonstrates why clients should choose Gazide Attorneys.</p>
+    </div>
+
+    <div class="instructions">
+        <h3>INSTRUCTIONS FOR COMPLETING THIS QUESTIONNAIRE:</h3>
+        <ul>
+            <li>✓ Answer as many questions as you can - even partial answers help!</li>
+            <li>✓ Write naturally, as if you're talking to a friend over coffee</li>
+            <li>✓ Don't worry about perfect grammar or length - I'll polish everything</li>
+            <li>✓ Feel free to skip questions that don't resonate with you</li>
+            <li>✓ Examples and specific stories are GOLD - please share them!</li>
+            <li>✓ There are no wrong answers - authenticity matters most</li>
+        </ul>
+        <p style="margin-top: 15px;"><strong>ESTIMATED TIME:</strong> 45-60 minutes (but take your time - no rush!)</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 1 -->
+    <div class="section">
+        <div class="section-header">SECTION 1: YOUR STORY</div>
+        <div class="section-subtitle">Understanding your journey and what drives you</div>
+
+        <div class="question">
+            <div class="question-number">1.</div>
+            <div class="question-text">What inspired you to become a lawyer?</div>
+            <div class="question-hint">Was there a specific moment, person, event, or experience that led you to pursue law? What was the turning point?</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">2.</div>
+            <div class="question-text">Why did you choose to specialize in the areas you practice?</div>
+            <div class="question-hint">Think about: RAF Claims, Medical Negligence, Family Law, etc. What draws you to these specific fields? Is there a personal connection or professional passion?</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">3.</div>
+            <div class="question-text">Why did you decide to start your own practice instead of joining a larger firm?</div>
+            <div class="question-hint">What was the catalyst? What freedoms or values were important to you?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">4.</div>
+            <div class="question-text">What does being a 100% black-owned firm mean to you?</div>
+            <div class="question-hint">How does this shape your practice, your approach, or the clients you serve? What does representation mean in your profession?</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">5.</div>
+            <div class="question-text">Why Durban?</div>
+            <div class="question-hint">What do you love about serving this community? What makes Durban special to you?</div>
+            <div class="answer-space"></div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 2 -->
+    <div class="section">
+        <div class="section-header">SECTION 2: UNDERSTANDING YOUR CLIENTS</div>
+        <div class="section-subtitle">Connecting with their emotions and concerns</div>
+
+        <div class="question">
+            <div class="question-number">6.</div>
+            <div class="question-text">What do clients typically feel when they first contact you?</div>
+            <div class="question-hint">Check all that apply, and feel free to add your own:</div>
+            <div class="checkbox-group">
+                <div class="checkbox-item"><input type="checkbox"> Scared</div>
+                <div class="checkbox-item"><input type="checkbox"> Confused</div>
+                <div class="checkbox-item"><input type="checkbox"> Angry</div>
+                <div class="checkbox-item"><input type="checkbox"> Hopeless</div>
+                <div class="checkbox-item"><input type="checkbox"> Overwhelmed</div>
+                <div class="checkbox-item"><input type="checkbox"> Frustrated</div>
+                <div class="checkbox-item"><input type="checkbox"> Relieved</div>
+                <div class="checkbox-item"><input type="checkbox"> Skeptical</div>
+            </div>
+            <div class="question-hint">Additional emotions you notice:</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">7.</div>
+            <div class="question-text">What's the biggest misconception people have about hiring an attorney?</div>
+            <div class="question-hint">What do they wrongly believe? What surprises them most?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">8.</div>
+            <div class="question-text">What's the most common question or concern clients have in the first meeting?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">9.</div>
+            <div class="question-text">If you could tell every potential client ONE thing before they contact you, what would it be?</div>
+            <div class="question-hint">This could become a powerful statement on your homepage!</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">10.</div>
+            <div class="question-text">Describe a time when you helped a client who thought they had no hope.</div>
+            <div class="question-hint">No names needed - just describe the situation, their state of mind, what you did, and the outcome. This makes powerful website content!</div>
+            <div class="subsection">
+                <div style="font-weight: 600; margin-bottom: 10px;">THE SITUATION:</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">WHAT YOU DID:</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">THE OUTCOME:</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">HOW IT MADE YOU FEEL:</div>
+                <div class="answer-space"></div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 3 -->
+    <div class="section">
+        <div class="section-header">SECTION 3: YOUR APPROACH & VALUES</div>
+        <div class="section-subtitle">What makes you different</div>
+
+        <div class="question">
+            <div class="question-number">11.</div>
+            <div class="question-text">In 2-3 sentences, what makes your approach different from other law firms in Durban?</div>
+            <div class="question-hint">This is your unique value proposition - what sets you apart?</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">12.</div>
+            <div class="question-text">How would your clients describe your communication style?</div>
+            <div class="checkbox-group">
+                <div class="checkbox-item"><input type="checkbox"> Approachable</div>
+                <div class="checkbox-item"><input type="checkbox"> Direct</div>
+                <div class="checkbox-item"><input type="checkbox"> Compassionate</div>
+                <div class="checkbox-item"><input type="checkbox"> Patient</div>
+                <div class="checkbox-item"><input type="checkbox"> Transparent</div>
+                <div class="checkbox-item"><input type="checkbox"> Responsive</div>
+                <div class="checkbox-item"><input type="checkbox"> Empathetic</div>
+                <div class="checkbox-item"><input type="checkbox"> Professional</div>
+                <div class="checkbox-item"><input type="checkbox"> Warm</div>
+                <div class="checkbox-item"><input type="checkbox"> Straight-shooter</div>
+            </div>
+            <div class="question-hint">In your own words:</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">13.</div>
+            <div class="question-text">What are your non-negotiables when taking on a case?</div>
+            <div class="question-hint">What must be true for you to say "yes" to representing someone? What matters most?</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">14.</div>
+            <div class="question-text">Complete this sentence:</div>
+            <div class="question-hint" style="font-size: 16px; font-style: normal; margin-top: 15px;">"Every client who works with me should feel _________________________________</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">15.</div>
+            <div class="question-text">What values guide your practice?</div>
+            <div class="question-hint">Beyond the typical "integrity, excellence" - what principles do YOU live by in your work?</div>
+            <div class="subsection">
+                <div style="font-weight: 600; margin-bottom: 10px;">VALUE 1:</div>
+                <div class="answer-space small"></div>
+                <div style="font-weight: 600; margin: 15px 0 10px 0;">Why it matters:</div>
+                <div class="answer-space small"></div>
+
+                <div style="font-weight: 600; margin: 25px 0 10px 0;">VALUE 2:</div>
+                <div class="answer-space small"></div>
+                <div style="font-weight: 600; margin: 15px 0 10px 0;">Why it matters:</div>
+                <div class="answer-space small"></div>
+
+                <div style="font-weight: 600; margin: 25px 0 10px 0;">VALUE 3:</div>
+                <div class="answer-space small"></div>
+                <div style="font-weight: 600; margin: 15px 0 10px 0;">Why it matters:</div>
+                <div class="answer-space small"></div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 4 -->
+    <div class="section">
+        <div class="section-header">SECTION 4: THE PROCESS</div>
+        <div class="section-subtitle">Demystifying legal services for potential clients</div>
+
+        <div class="question">
+            <div class="question-number">16.</div>
+            <div class="question-text">Walk me through what happens after someone contacts you for the first time.</div>
+            <div class="question-hint">Help potential clients understand the journey ahead. Be specific!</div>
+            <div class="subsection">
+                <div style="font-weight: 600; margin-bottom: 10px;">FIRST CONTACT (Phone/Email):</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">FIRST MEETING:</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">DURING THE CASE:</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">CASE RESOLUTION:</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">AFTER THE CASE:</div>
+                <div class="answer-space"></div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">17.</div>
+            <div class="question-text">What does a typical day look like for you?</div>
+            <div class="question-hint">This helps show the human side of being an attorney. A glimpse behind the scenes!</div>
+            <div class="subsection">
+                <div style="font-weight: 600; margin-bottom: 10px;">MORNING:</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">AFTERNOON:</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">EVENING:</div>
+                <div class="answer-space"></div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">18.</div>
+            <div class="question-text">How do you keep clients informed throughout their case?</div>
+            <div class="checkbox-group">
+                <div class="checkbox-item"><input type="checkbox"> WhatsApp messages</div>
+                <div class="checkbox-item"><input type="checkbox"> Email updates</div>
+                <div class="checkbox-item"><input type="checkbox"> Phone calls</div>
+                <div class="checkbox-item"><input type="checkbox"> In-person meetings</div>
+                <div class="checkbox-item"><input type="checkbox"> Progress reports</div>
+                <div class="checkbox-item"><input type="checkbox"> Online portal</div>
+            </div>
+            <div class="question-hint">Describe your communication approach:</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">19.</div>
+            <div class="question-text">What's the hardest part of your job that clients don't see?</div>
+            <div class="question-hint">The behind-the-scenes challenges, emotional labor, or complexities?</div>
+            <div class="answer-space large"></div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 5 -->
+    <div class="section">
+        <div class="section-header">SECTION 5: SUCCESS STORIES & TESTIMONIALS</div>
+        <div class="section-subtitle">Building trust through results</div>
+
+        <div class="question">
+            <div class="question-number">20.</div>
+            <div class="question-text">What's the most rewarding case you've ever worked on?</div>
+            <div class="question-hint">What made it meaningful to you? What was at stake? (Keep confidentiality in mind)</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">21.</div>
+            <div class="question-text">Client testimonials - Can you reach out to 3-5 happy clients?</div>
+            <div class="question-hint">Please list clients who were particularly satisfied and might be willing to provide a brief testimonial. I'll help you draft a request email if needed!</div>
+            <div class="subsection">
+                <div style="font-weight: 600; margin-bottom: 10px;">CLIENT 1:</div>
+                <div style="margin-left: 20px;">
+                    <div style="margin: 10px 0;">Name: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                    <div style="margin: 10px 0;">Case Type: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                    <div style="margin: 10px 0;">Why they'd be great: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                </div>
+
+                <div style="font-weight: 600; margin: 25px 0 10px 0;">CLIENT 2:</div>
+                <div style="margin-left: 20px;">
+                    <div style="margin: 10px 0;">Name: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                    <div style="margin: 10px 0;">Case Type: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                    <div style="margin: 10px 0;">Why they'd be great: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                </div>
+
+                <div style="font-weight: 600; margin: 25px 0 10px 0;">CLIENT 3:</div>
+                <div style="margin-left: 20px;">
+                    <div style="margin: 10px 0;">Name: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                    <div style="margin: 10px 0;">Case Type: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                    <div style="margin: 10px 0;">Why they'd be great: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                </div>
+
+                <div style="font-weight: 600; margin: 25px 0 10px 0;">CLIENT 4 (Optional):</div>
+                <div style="margin-left: 20px;">
+                    <div style="margin: 10px 0;">Name: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                    <div style="margin: 10px 0;">Case Type: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                    <div style="margin: 10px 0;">Why they'd be great: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                </div>
+
+                <div style="font-weight: 600; margin: 25px 0 10px 0;">CLIENT 5 (Optional):</div>
+                <div style="margin-left: 20px;">
+                    <div style="margin: 10px 0;">Name: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                    <div style="margin: 10px 0;">Case Type: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                    <div style="margin: 10px 0;">Why they'd be great: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 300px;"></span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">22.</div>
+            <div class="question-text">What's the most memorable feedback or thank-you you've received from a client?</div>
+            <div class="question-hint">Try to remember it word-for-word if possible, or capture the essence of what they said:</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">23.</div>
+            <div class="question-text">Have clients referred others to you?</div>
+            <div class="question-hint">What do they typically say when recommending you to friends/family?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">24.</div>
+            <div class="question-text">Share a case that best demonstrates your expertise.</div>
+            <div class="question-hint">Pick your strongest practice area. What was the challenge? How did you approach it? What was the result? (General details only)</div>
+            <div class="subsection">
+                <div style="font-weight: 600; margin-bottom: 10px;">PRACTICE AREA:</div>
+                <div class="answer-space small"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">THE CHALLENGE:</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">YOUR APPROACH:</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">THE RESULT:</div>
+                <div class="answer-space"></div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 6 -->
+    <div class="section">
+        <div class="section-header">SECTION 6: MAKING IT PERSONAL</div>
+        <div class="section-subtitle">The human behind the attorney</div>
+
+        <div class="question">
+            <div class="question-number">25.</div>
+            <div class="question-text">If you weren't a lawyer, what would you be doing?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">26.</div>
+            <div class="question-text">What does "justice" mean to you personally?</div>
+            <div class="question-hint">Beyond the legal definition - what does it mean in your heart?</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">27.</div>
+            <div class="question-text">What do you do to recharge after a tough case or stressful week?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">28.</div>
+            <div class="question-text">Is there a quote, principle, or motto you live by?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">29.</div>
+            <div class="question-text">What makes you smile during your workday?</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">30.</div>
+            <div class="question-text">When you win a case, how does it feel? How do you celebrate with your client?</div>
+            <div class="answer-space"></div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 7 -->
+    <div class="section">
+        <div class="section-header">SECTION 7: COMMUNITY & IMPACT</div>
+        <div class="section-subtitle">Your broader influence</div>
+
+        <div class="question">
+            <div class="question-number">31.</div>
+            <div class="question-text">Are you involved in any community work, pro bono cases, or mentorship?</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">32.</div>
+            <div class="question-text">What impact do you want to have on your community through your practice?</div>
+            <div class="question-hint">Think beyond winning cases - what's the bigger picture? Your legacy?</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">33.</div>
+            <div class="question-text">Have you won any awards, recognition, or achievements you're proud of?</div>
+            <div class="question-hint">Professional awards, community recognition, academic achievements, speaking engagements, etc.</div>
+            <div class="answer-space"></div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 8 -->
+    <div class="section">
+        <div class="section-header">SECTION 8: PRACTICAL INFORMATION</div>
+        <div class="section-subtitle">Service-specific details for the website</div>
+
+        <div class="question">
+            <div class="question-number">34.</div>
+            <div class="question-text">For each of your main practice areas, please provide:</div>
+        </div>
+
+        <div class="subsection">
+            <div class="subsection-title">RAF Claims (Road Accident Fund)</div>
+
+            <div style="font-weight: 600; margin: 15px 0 10px 0;">Why do people need a lawyer for RAF claims?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">What's your success rate or typical outcome?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">How long does the process typically take?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">What should clients bring to the first meeting?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">Common mistakes people make without a lawyer:</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="subsection">
+            <div class="subsection-title">Medical Negligence</div>
+
+            <div style="font-weight: 600; margin: 15px 0 10px 0;">Why do people need a lawyer for medical negligence cases?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">What's your success rate or typical outcome?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">How long does the process typically take?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">What should clients bring to the first meeting?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">Common mistakes people make without a lawyer:</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="subsection">
+            <div class="subsection-title">Family Law</div>
+
+            <div style="font-weight: 600; margin: 15px 0 10px 0;">Why do people need a lawyer for family law matters?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">What's your success rate or typical outcome?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">How long does the process typically take?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">What should clients bring to the first meeting?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">Your approach to sensitive family matters:</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="subsection">
+            <div class="subsection-title">Wills & Estate Administration</div>
+
+            <div style="font-weight: 600; margin: 15px 0 10px 0;">Why do people need a lawyer for wills and estates?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">What's your typical process?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">How long does the process typically take?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">What should clients bring to the first meeting?</div>
+            <div class="answer-space"></div>
+
+            <div style="font-weight: 600; margin: 20px 0 10px 0;">Common mistakes people make without a lawyer:</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">35.</div>
+            <div class="question-text">What questions do you wish clients would ask but they never do?</div>
+            <div class="question-hint">The important questions that would help them understand the process or make better decisions?</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">36.</div>
+            <div class="question-text">What advice would you give someone currently facing a legal issue?</div>
+            <div class="question-hint">General wisdom, not specific legal advice - what should they know?</div>
+            <div class="answer-space large"></div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 9 -->
+    <div class="section">
+        <div class="section-header">SECTION 9: VISUAL CONTENT</div>
+        <div class="section-subtitle">Planning photos and videos</div>
+
+        <div class="question">
+            <div class="question-number">37.</div>
+            <div class="question-text">Are you comfortable with the following for the website?</div>
+            <div class="checkbox-group">
+                <div class="checkbox-item"><input type="checkbox"> Professional headshot photos (studio quality)</div>
+                <div class="checkbox-item"><input type="checkbox"> Candid photos of you working in your office</div>
+                <div class="checkbox-item"><input type="checkbox"> A short video introduction (2-3 minutes)</div>
+                <div class="checkbox-item"><input type="checkbox"> Photos of your office space/environment</div>
+                <div class="checkbox-item"><input type="checkbox"> Photos with clients (with their permission)</div>
+            </div>
+            <div class="question-hint">Notes or concerns:</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">38.</div>
+            <div class="question-text">Do you have any existing photos we could use?</div>
+            <div class="checkbox-group">
+                <div class="checkbox-item"><input type="checkbox"> Office space/building exterior</div>
+                <div class="checkbox-item"><input type="checkbox"> Professional headshots</div>
+                <div class="checkbox-item"><input type="checkbox"> Certificates/diplomas/awards</div>
+                <div class="checkbox-item"><input type="checkbox"> Community events you've participated in</div>
+                <div class="checkbox-item"><input type="checkbox"> Team photos (if you have staff)</div>
+                <div class="checkbox-item"><input type="checkbox"> Speaking engagements or conferences</div>
+            </div>
+            <div class="question-hint">Where are they stored? (Google Drive, phone, computer, etc.)</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">39.</div>
+            <div class="question-text">Any photos or visual content you definitely DON'T want on the website?</div>
+            <div class="question-hint">Setting boundaries is important! Be honest about what makes you uncomfortable.</div>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">40.</div>
+            <div class="question-text">Would you be open to a professional photoshoot?</div>
+            <div style="margin: 15px 0;">
+                If yes, preferred location:
+                <label style="margin-left: 20px;"><input type="checkbox"> Office</label>
+                <label style="margin-left: 20px;"><input type="checkbox"> Studio</label>
+                <label style="margin-left: 20px;"><input type="checkbox"> Outdoor</label>
+                <label style="margin-left: 20px;"><input type="checkbox"> Other: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 200px;"></span></label>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 10 -->
+    <div class="section">
+        <div class="section-header">SECTION 10: WEBSITE-SPECIFIC</div>
+        <div class="section-subtitle">The big picture</div>
+
+        <div class="question">
+            <div class="question-number">41.</div>
+            <div class="question-text">When someone lands on your website for the first time, what's the ONE thing you want them to know or feel?</div>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">42.</div>
+            <div class="question-text">What are the top 3 reasons someone should choose you over another attorney?</div>
+            <div class="question-hint">This is critical - be specific and honest!</div>
+            <div class="subsection">
+                <div style="font-weight: 600; margin-bottom: 10px;">REASON 1:</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">REASON 2:</div>
+                <div class="answer-space"></div>
+                <div style="font-weight: 600; margin: 20px 0 10px 0;">REASON 3:</div>
+                <div class="answer-space"></div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">43.</div>
+            <div class="question-text">What questions do clients ask most frequently?</div>
+            <div class="question-hint">These will become your FAQ section - list as many as you can think of!</div>
+            <div class="subsection">
+                <div style="margin: 10px 0;">Q: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 80%;"></span></div>
+                <div style="margin: 10px 0;">Q: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 80%;"></span></div>
+                <div style="margin: 10px 0;">Q: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 80%;"></span></div>
+                <div style="margin: 10px 0;">Q: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 80%;"></span></div>
+                <div style="margin: 10px 0;">Q: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 80%;"></span></div>
+                <div style="margin: 10px 0;">Q: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 80%;"></span></div>
+                <div style="margin: 10px 0;">Q: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 80%;"></span></div>
+                <div style="margin: 10px 0;">Q: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 80%;"></span></div>
+                <div style="margin: 10px 0;">Q: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 80%;"></span></div>
+                <div style="margin: 10px 0;">Q: <span style="border-bottom: 1px solid #ccc; display: inline-block; min-width: 80%;"></span></div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">44.</div>
+            <div class="question-text">Is there anything else you want visitors to know that I haven't asked about?</div>
+            <div class="answer-space large"></div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- BONUS SECTION -->
+    <div class="bonus-section">
+        <div class="section-header" style="margin: 0 0 30px 0;">BONUS: QUICK FIRE ROUND</div>
+        <div class="section-subtitle" style="margin-top: -25px;">Fun, fast answers to show personality!</div>
+
+        <div class="quick-fire">
+            <div class="quick-fire-label">Favorite thing about being a lawyer:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">Proudest professional moment:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">Coffee or tea:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">How do you take it:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">Early bird or night owl:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">Best part of Durban:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">Favorite local spot:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">Hidden talent:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">Book that influenced you:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">Favorite way to spend a Sunday:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">Best advice you've ever received:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">If you could have dinner with any historical figure:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">Your go-to comfort food:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">Favorite quote:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">What you're currently reading:</div>
+            <div class="quick-fire-input"></div>
+
+            <div class="quick-fire-label">Your guilty pleasure:</div>
+            <div class="quick-fire-input"></div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- FINAL MESSAGE -->
+    <div class="highlight-box">
+        <h3 style="color: #8B1538; margin-bottom: 15px;">FINAL THOUGHTS</h3>
+        <p style="margin-bottom: 15px;"><strong>Thank you so much for taking the time to complete this questionnaire, Nongcebo!</strong></p>
+        <p style="margin-bottom: 15px;">Your answers will help create a website that doesn't just list services, but shows <strong>WHO YOU ARE</strong> and <strong>WHY</strong> clients should trust you with their most important legal matters.</p>
+        <p style="margin-bottom: 0;"><strong>Remember:</strong> People don't hire law firms - they hire LAWYERS they trust and connect with. Your story, your values, and your personality are what will set your website apart from every other attorney in Durban.</p>
+    </div>
+
+    <div class="instructions" style="background: #f0fff0;">
+        <h3 style="color: #2d6a2d;">NEXT STEPS:</h3>
+        <ol style="margin-left: 25px;">
+            <li>Complete as many questions as possible</li>
+            <li>Return this document by: <strong>_____________________</strong></li>
+            <li>I'll review your answers and may follow up with 1-2 clarifying questions</li>
+            <li>I'll transform your responses into compelling website content</li>
+            <li>You'll review and approve everything before it goes live</li>
+        </ol>
+    </div>
+
+    <div class="instructions" style="background: #fff5e6; border-color: #ff9800;">
+        <h3 style="color: #ff9800;">QUESTIONS OR NEED HELP?</h3>
+        <p>Don't hesitate to reach out if:</p>
+        <ul style="margin-left: 25px;">
+            <li>Any question is unclear</li>
+            <li>You need examples of good answers</li>
+            <li>You want to discuss something in person instead of writing</li>
+            <li>You have additional ideas not covered here</li>
+        </ul>
+        <p style="margin-top: 15px; margin-bottom: 0;"><strong>Your passion for justice and your clients deserves a website that reflects it!</strong></p>
+    </div>
+
+    <div class="footer">
+        <p style="font-weight: 600; color: #8B1538; margin-bottom: 10px;">Document prepared with care for Gazide Attorneys</p>
+        <p>January 2025</p>
+        <hr style="border: 0; height: 1px; background: #ddd; margin: 20px auto; max-width: 300px;">
+        <p style="font-size: 12px; color: #999;">Brand Colors: Maroon (#8B1538) • Black (#0A0A0A) • White (#FFFFFF)</p>
+        <p style="font-size: 12px; color: #999;">Tagline: "Experience, Integrity and Excellence"</p>
+    </div>
+
+</body>
+</html>
