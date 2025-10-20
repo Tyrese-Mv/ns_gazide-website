@@ -43,8 +43,41 @@
   border-top: 4px solid var(--primary-color);
 }
 
-.service-detail-card:hover {
-  box-shadow: 0 12px 35px rgba(139, 21, 56, 0.2);
+.service-detail-card.clickable {
+  cursor: pointer;
+}
+
+.service-detail-card.clickable:hover {
+  box-shadow: 0 12px 35px rgba(139, 21, 56, 0.25);
+  border-top-width: 6px;
+}
+
+.service-detail-card:focus {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+.service-icon-badge {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(139, 21, 56, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.service-icon-badge svg {
+  width: 36px;
+  height: 36px;
+  color: var(--accent-color);
+}
+
+.service-detail-card:hover .service-icon-badge {
+  transform: rotate(10deg) scale(1.1);
 }
 
 .service-number {

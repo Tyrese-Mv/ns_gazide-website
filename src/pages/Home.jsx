@@ -1,13 +1,28 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { SEO_DEFAULTS, COMPANY_INFO, STATS } from '../utils/constants';
 import { getFeaturedServices } from '../data/services';
 import { fadeInUp, staggerChildren } from '../utils/animations';
+import ServiceModal from '../components/ServiceModal';
+import { ServiceIcon } from '../components/ServiceIcons';
 import './Home.css';
 
 const Home = () => {
   const featuredServices = getFeaturedServices(6);
+  const [selectedService, setSelectedService] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleServiceClick = (service) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedService(null), 300);
+  };
 
 
   return (
@@ -185,7 +200,7 @@ const Home = () => {
             {featuredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                className="service-card"
+                className="service-card clickable"
                 variants={fadeInUp}
                 whileHover={{
                   y: -10,
@@ -194,15 +209,30 @@ const Home = () => {
                   transition: { duration: 0.3 }
                 }}
                 whileTap={{ scale: 0.98 }}
+                onClick={() => handleServiceClick(service)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleServiceClick(service);
+                  }
+                }}
+                aria-label={`Learn more about ${service.title}`}
               >
                 <motion.div
-                  className="service-icon-dot"
+                  className="service-icon-wrapper"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + index * 0.05, type: "spring", stiffness: 200 }}
-                />
+                >
+                  <ServiceIcon type={service.iconType} className="service-card-icon" />
+                  <div className="service-icon-dot" />
+                </motion.div>
                 <h3>{service.title}</h3>
+                <p className="service-short-desc">{service.shortDescription}</p>
+                <span className="click-to-learn">Click to learn more →</span>
               </motion.div>
             ))}
           </div>
@@ -230,6 +260,13 @@ const Home = () => {
           </Link>
         </div>
       </motion.section>
+
+      {/* Service Detail Modal */}
+      <ServiceModal
+        service={selectedService}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </div>
   );
 };

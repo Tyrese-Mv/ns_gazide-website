@@ -1,0 +1,339 @@
+/* Modal Backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 9998;
+}
+
+/* Modal Container */
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: 90%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  z-index: 9999;
+  border-radius: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: var(--accent-color);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Close Button */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--dark-gray);
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: var(--primary-color);
+  color: var(--accent-color);
+  transform: rotate(90deg);
+}
+
+/* Modal Header */
+.modal-header {
+  text-align: center;
+  padding: 50px 40px 30px;
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.modal-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(139, 21, 56, 0.3);
+}
+
+.modal-icon svg {
+  width: 44px;
+  height: 44px;
+  color: var(--accent-color);
+}
+
+.modal-title {
+  font-size: 28px;
+  color: var(--secondary-color);
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 40px;
+}
+
+.service-description {
+  margin-bottom: 35px;
+}
+
+.service-description p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.service-benefits,
+.service-what-we-do {
+  margin-bottom: 30px;
+}
+
+.service-benefits h3,
+.service-what-we-do h3 {
+  font-size: 22px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.service-benefits h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
+}
+
+.service-what-we-do h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
+}
+
+.service-benefits ul,
+.service-what-we-do ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-benefits li,
+.service-what-we-do li {
+  padding: 12px 0 12px 40px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--dark-gray);
+  position: relative;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.service-benefits li:last-child,
+.service-what-we-do li:last-child {
+  border-bottom: none;
+}
+
+.benefit-icon {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 24px;
+  height: 24px;
+  background: var(--primary-color);
+  color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.service-what-we-do li::before {
+  content: '→';
+  position: absolute;
+  left: 8px;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 30px 40px 40px;
+  border-top: 2px solid var(--light-gray);
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.modal-cta-button {
+  flex: 1;
+  min-width: 200px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--accent-color);
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.modal-cta-button:hover {
+  box-shadow: 0 8px 25px rgba(139, 21, 56, 0.4);
+  transform: translateY(-2px);
+}
+
+.modal-close-button {
+  flex: 1;
+  min-width: 150px;
+  background: var(--light-gray);
+  color: var(--secondary-color);
+  padding: 16px 32px;
+  border: 2px solid var(--medium-gray);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-close-button:hover {
+  background: var(--medium-gray);
+  border-color: var(--dark-gray);
+}
+
+/* Custom Scrollbar for Modal */
+.modal-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-container::-webkit-scrollbar-track {
+  background: var(--light-gray);
+  border-radius: 8px;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 8px;
+}
+
+.modal-container::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-container {
+    width: 95%;
+    max-height: 90vh;
+    top: 50% !important;
+    left: 50% !important;
+  }
+
+  .modal-header {
+    padding: 40px 25px 25px;
+  }
+
+  .modal-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .modal-icon svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .modal-title {
+    font-size: 24px;
+  }
+
+  .modal-body {
+    padding: 30px 25px;
+  }
+
+  .modal-footer {
+    padding: 25px;
+    flex-direction: column;
+  }
+
+  .modal-cta-button,
+  .modal-close-button {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-container {
+    width: 95%;
+    max-height: 92vh;
+    top: 50% !important;
+    left: 50% !important;
+  }
+
+  .modal-close {
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .modal-header {
+    padding: 35px 20px 20px;
+  }
+
+  .modal-body {
+    padding: 25px 20px;
+  }
+
+  .service-benefits h3,
+  .service-what-we-do h3 {
+    font-size: 20px;
+  }
+
+  .service-benefits li,
+  .service-what-we-do li {
+    font-size: 15px;
+    padding-left: 35px;
+  }
+}
