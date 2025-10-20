@@ -140,7 +140,7 @@ const ServiceModal = ({ service, isOpen, onClose }) => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Get a Free Consultation
+                  Get a Consultation
                 </motion.a>
                 <button className="modal-close-button" onClick={onClose}>
                   Close

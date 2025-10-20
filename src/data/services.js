@@ -35,7 +35,7 @@ export const services = [
     shortDescription: 'Comprehensive legal support for medical malpractice cases.',
     description: 'Comprehensive legal support for medical malpractice cases. Our team has extensive experience in holding healthcare providers accountable for substandard care and medical errors.',
     benefits: [
-      'Specialized knowledge in medical law',
+      'specialised knowledge in medical law',
       'Access to independent medical experts',
       'No fee unless we win your case',
       'Compassionate and confidential service',
